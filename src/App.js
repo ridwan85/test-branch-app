@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 // import branch from 'branchio-sdk';
 import { newTracker, trackPageView } from '@snowplow/browser-tracker';
 
+import uuid from 'random-uuid-v4'
+
 function App() {
   useEffect(() => {
     if (window.branch) {
@@ -10,8 +12,8 @@ function App() {
           console.error('Error from Branch: ' + err);
           return;
         }
-
-        const user_id='someUserId192921'
+        
+        const user_id = uuid();
         // Track user journey
         window.branch.setIdentity(user_id, function(err, data) {
           if (err) {
