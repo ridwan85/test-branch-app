@@ -7,7 +7,7 @@ import uuid from 'random-uuid-v4'
 function App() {
   useEffect(() => {
     if (window.branch) {
-      window.branch.init('key_live_kAbaGQZJuRLc7MeRgAffJbogDEfT4T3z', function(err, data) {
+      window.branch.init('key_test_hlYYDeatflVtcZkMNshFpjanEFiaolWB', function(err, data) {
         if (err) {
           console.error('Error from Branch: ' + err);
           return;
@@ -55,7 +55,7 @@ function App() {
   return (
     <div className="App">
       {/* Your app content */}
-      Hellow world
+      <h1>Testing NEX app branchio integration</h1>
     </div>
   );
 }
